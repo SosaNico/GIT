@@ -121,14 +121,14 @@ li a:hover{
 
 .Seccion__1{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 80px 1fr;
     grid-template-areas:
-    "informacion informacion informacion informacion"
-    "imagen      texto       texto       texto";
+    "informacion informacion"
+    "imagen      texto      ";
     padding: 30px;
     width: 100%;
-    grid-gap: 40px 20px;
+    grid-gap: 40px 0;
 }
 
 .Titulo__2-h2 a{
@@ -151,8 +151,7 @@ li a:hover{
     grid-area:imagen;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    padding-right: 15px;
+    justify-content: center;
     width: 100%;
 }
 
@@ -165,13 +164,14 @@ li a:hover{
     display: flex;
     flex-wrap: wrap;
     align-self: center;
+    justify-self: start;
 }
 
 .Lorem__1 p{
     display: flex;
     color: #000;
     font-weight: bold;
-    padding: 30px 30px 30px 30px;
+    padding: 30px;
     border: 5px solid #000;
     box-shadow: 10px 10px 30px 10px #fff;
     transition: 1s
@@ -520,6 +520,134 @@ transition: 1s;
     bottom: 20px;
 }
 
+                            /* INDEX RESPONSIVE */
+
+@media only screen and (min-width: 1224px) and (max-width: 1475px){
+    .Logo{
+        align-self: center;
+    }
+    .Logo__img{
+        width: 200px;
+        height: 200px;
+    }
+
+    .Navegador__1{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+}
+
+    .Navegador__lista-1{
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 20px;
+}
+
+    .Navegador__lista-2{
+    display: flex;
+    flex-flow: row wrap;
+    justify-self: center;
+    margin: 5px;
+    list-style: none;
+}
+
+    li a{
+    text-decoration: none;
+    border-bottom-color: #000 ;
+    color: #fff;
+    border-bottom: 3px solid transparent;
+    transition: border .3s ease;
+    padding-bottom: 5px;
+}
+    .Busqueda{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width:350px;
+}
+
+    .Busqueda__1{
+    width: 0px;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 20px;
+    margin-left: 30px;
+    color: #000;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 30px;
+    transition: all .6s ease;
+}
+
+    .btn{
+    position: relative;
+    right: 44px;
+    background-color: #000;
+    width: 50px;
+    height: 50px;
+    line-height: 55px;
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+    .Busqueda:hover input{
+    width: 250px;
+
+}
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1224px){
+    .Logo{
+        margin-right: 15px;
+}
+    .Logo__img{
+        width: 150px;
+        height: 150px;
+}
+    .Navegador__lista-1{
+    font-size: 18px;
+}
+    .Navegador__lista-2{
+    margin: 5px;
+}
+    .Busqueda{
+    width:250px;
+}
+    .Busqueda__1{
+    width: 0px;
+    height: 40px;
+    font-size: 18px;
+}
+    .btn{
+    right: 44px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 22px;
+}
+    .Busqueda:hover input{
+    width: 150px;
+} 
+    .Titulo__2-h2{
+        font-size: 26px;
+    }
+    .Imagen__informacion{
+        grid-area:imagen;
+        padding-right: 15px;
+        width: 100%;
+    }
+    .Lorem__1{
+        grid-area:texto;
+        padding: 0 15px 0 15px;
+        font-size: 14px;
+    }
+}
+
 
                             /* INFORMACION.HTML */
 
@@ -588,6 +716,7 @@ transition: 1s;
     font-size: 30px;
     text-shadow: 4px 6px 8px #000, 4px 6px 10px #fff;
     padding: 30px;
+    margin-right: 75px;
     justify-content: center;
     align-items: center;
 }
@@ -634,7 +763,6 @@ transition: 1s;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
     height: 1000px;
-    background-color: #000;
     grid-gap: 20px;
     margin: 20px;
 }
@@ -744,8 +872,6 @@ transition: 1s;
 .Video__galeria video{
     box-shadow: 5px 5px 10px 10px #f10d0d, 10px 10px 10px 10px #fff;
 }
-
-                            /* RESPONSIVE */
 
                             /* PRODUCTOS.HTML */
 
