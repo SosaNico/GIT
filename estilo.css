@@ -226,6 +226,10 @@ color: #f5deb3;
     text-shadow: 4px 6px 8px #000, 4px 6px 10px #fff;
 }
 
+.informacion p{
+    color: #fff;
+}
+
                             /* GALERIA.HTML */
 
 .Titulo__galeria u{
