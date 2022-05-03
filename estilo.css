@@ -84,10 +84,11 @@ li a:hover{
 
 .Subtitulo__h3-2{
     grid-area: subtitulo2;
+    display: flex;
     position: relative;
     margin: 5% auto 0;
     width: 90%;
-    height: 100px;
+    height: 150px;
     margin-bottom: 30px;
     font-weight: bold;
     font-family: 'Playfair Display', serif;
@@ -147,7 +148,11 @@ li a:hover{
 
                             /* Seccion Contacto */
 
-#pie{
+#pie .container-fluid{
+color: #f5deb3;
+}
+
+/* #pie{
     display: grid;
     width: 100%;
     grid-template-columns: repeat(2, 1fr);
@@ -200,7 +205,7 @@ li a:hover{
     grid-area: copyright;
     align-self: flex-end;
     color: #fff;
-}
+} */
 
 .subir{
     color:orange;
