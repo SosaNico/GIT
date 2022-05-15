@@ -70,13 +70,14 @@ li a:hover {
 /* Seccion Galería */
 .Subtitulo h2 {
   color: #fff;
+  text-shadow: 4px 6px 8px #000, 4px 6px 10px #fff;
 }
 
 .title {
   color: #fff;
 }
 
-@media only screen and (min-width: 300px) and (max-width: 450px) {
+@media only screen and (min-width: 300px) and (max-width: 576px) {
   .fotos-galeria {
     width: 250px;
     height: 100%;
@@ -85,9 +86,18 @@ li a:hover {
     border-radius: 15px;
   }
 }
-@media only screen and (min-width: 450px) and (max-width: 767px) {
+@media only screen and (min-width: 577px) and (max-width: 768px) {
   .fotos-galeria {
     width: 400px;
+    height: 100%;
+  }
+  .fotos-galeria .fotos a img {
+    border-radius: 15px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .fotos-galeria {
+    width: 800px;
     height: 100%;
   }
   .fotos-galeria .fotos a img {
@@ -329,58 +339,42 @@ li a:hover {
   transform: scale(1.1);
 }
 
-/* PRODUCTOS.HTML */
-.Titulo__productos {
-  display: block;
-  font-family: "Fredoka One", cursive;
-  font-size: 60px;
-  text-shadow: 4px 6px 8px #000, 4px 6px 10px #fff;
-  padding-bottom: 50px;
-  text-align: left;
-  margin-bottom: 30px;
-  margin-left: 30px;
-  padding-top: 20px;
-}
-.Titulo__productos u {
-  color: #fff;
-  text-decoration: none;
-}
-.Titulo__productos td {
-  padding: 40px;
-}
-
 /* ENVIOS.HTML */
-.Titulo__envios {
+.subtitulo {
   display: block;
-  font-family: "Fredoka One", cursive;
-  font-size: 60px;
-  text-shadow: 4px 6px 8px #000, 4px 6px 10px #fff;
-  padding-bottom: 50px;
-  text-align: left;
-  margin-bottom: 30px;
-  margin-left: 30px;
-  padding-top: 20px;
-}
-.Titulo__envios u {
-  color: #fff;
-  text-decoration: none;
+  font-size: 30px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  text-decoration: underline;
+  white-space: nowrap;
+  border-right: 4px solid;
+  width: 22ch;
+  animation: typing 2s steps(22), blink 0.5s infinite step-end alternate;
+  overflow: hidden;
 }
 
-#Formulario {
-  background-color: #000;
+@keyframes typing {
+  from {
+    width: 0;
+  }
 }
-
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
 #Form__1 {
   font-family: "Grape Nuts", cursive;
   margin: 20px;
 }
 
+@media only screen and (min-width: 250px) and (max-width: 459px) {
+  .subtitulo {
+    font-size: 22px;
+  }
+}
 .Color__letra {
   color: #fff;
-}
-.Color__letra .subtitulo {
-  font-size: 30px;
-  margin-left: 15px;
 }
 .Color__letra .pais {
   font-size: 20px;
@@ -430,51 +424,6 @@ li a:hover {
   width: 100px;
 }
 
-/* CONTACTO.HTML */
-.Titulo__contacto u {
-  color: #fff;
-  text-decoration: none;
-}
-
-.Titulo__contacto {
-  display: block;
-  font-family: "Fredoka One", cursive;
-  font-size: 60px;
-  text-shadow: 4px 6px 8px #000, 4px 6px 10px #fff;
-  padding-bottom: 50px;
-  text-align: left;
-  margin-bottom: 30px;
-  margin-left: 30px;
-  padding-top: 20px;
-}
-
-.Titulo__contacto-1 {
-  color: #fff;
-  font-size: 40px;
-  font-family: "Fredoka One", cursive;
-  text-shadow: 4px 6px 8px #000, 4px 6px 10px #fff;
-}
-
-#Gif__ig {
-  margin: 100px 0 30px 500px;
-}
-
-.Ig__contacto {
-  position: absolute;
-  color: #fff;
-  font-size: 40px;
-  font-family: "Fredoka One", cursive;
-  top: 45%;
-  left: 50%;
-  text-shadow: 4px 6px 8px #000, 4px 6px 10px #fff;
-}
-
-.Subtitulo__contacto {
-  color: #fff;
-  font-size: 40px;
-  font-family: "Grape Nuts", cursive;
-  margin: 15px;
-  text-shadow: 4px 6px 8px #000, 4px 6px 10px #fff;
-}
+/* PREGUNTAS.HTML */
 
 /*# sourceMappingURL=estilo.css.map */

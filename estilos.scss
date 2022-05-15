@@ -81,6 +81,7 @@ li{
 .Subtitulo{
     h2{
         color: $color-1;
+        text-shadow: 4px 6px 8px #000, 4px 6px 10px #fff;
     }
 }
 
@@ -88,7 +89,7 @@ li{
     color: $color-1;
 }
 
-@media only screen and (min-width: 300px) and (max-width: 450px){
+@media only screen and (min-width: 300px) and (max-width: 576px){
     .fotos-galeria{
         width: 250px;
         height: 100%;
@@ -102,7 +103,7 @@ li{
     }
 }
 
-@media only screen and (min-width: 450px) and (max-width: 767px){
+@media only screen and (min-width: 577px) and (max-width: 768px){
     .fotos-galeria{
         width: 400px;
         height: 100%;
@@ -116,6 +117,19 @@ li{
     }
 }
 
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    .fotos-galeria{
+        width: 800px;
+        height: 100%;
+        .fotos{
+            a{
+                img{
+                    border-radius: 15px;
+                }
+            }
+        }
+    }
+}
                             /* Seccion Productos */
 
 .color-text{
@@ -388,47 +402,29 @@ $tamaño-fuente: ("fuente1": 35px, "fuente2": 30px);
     }
 }
 
-                            /* PRODUCTOS.HTML */ 
-
-.Titulo__productos{
-    display: block;
-    font-family: 'Fredoka One', cursive;
-    font-size: 60px;
-    text-shadow: 4px 6px 8px #000, 4px 6px 10px #fff;
-    padding-bottom: 50px;
-    text-align: left;
-    margin-bottom: 30px;
-    margin-left: 30px;
-    padding-top: 20px;
-        u{
-            color: $color-1;
-            text-decoration: none;
-        }
-            td{
-                padding: 40px;
-            }
-}
-
     /* ENVIOS.HTML */
 
-.Titulo__envios{
+.subtitulo{
     display: block;
-    font-family: 'Fredoka One', cursive;
-    font-size: 60px;
-    text-shadow: 4px 6px 8px #000, 4px 6px 10px #fff;
-    padding-bottom: 50px;
-    text-align: left;
-    margin-bottom: 30px;
-    margin-left: 30px;
-    padding-top: 20px;
-        u{
-            color: $color-1;
-            text-decoration: none;
-        }
-} 
+    font-size: 30px;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    text-decoration: underline;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 22ch;
 
-#Formulario{
-    background-color: #000;
+    animation: typing 2s steps(22),
+    blink .5s infinite step-end alternate;
+    overflow: hidden;
+}
+
+@keyframes typing {
+    from { width: 0}
+}
+
+@keyframes blink {
+    50% {border-color: transparent}
 }
 
 #Form__1{
@@ -436,12 +432,14 @@ $tamaño-fuente: ("fuente1": 35px, "fuente2": 30px);
     margin: 20px;
 }
 
+@media only screen and (min-width: 250px) and (max-width: 459px){
+    .subtitulo{
+        font-size: 22px;
+    }
+}
+
 .Color__letra{
     color: $color-1;
-        .subtitulo{
-            font-size: 30px;
-            margin-left: 15px;
-        }
         .pais{
             font-size: 20px;
             margin: 15px;
@@ -492,52 +490,52 @@ $tamaño-fuente: ("fuente1": 35px, "fuente2": 30px);
     width: 100px;
 }
 
-    /* CONTACTO.HTML */
+    /* PREGUNTAS.HTML */
 
-.Titulo__contacto{
-        u{
-            color: $color-1;
-            text-decoration: none;
-        }
-}
+// .Titulo__contacto{
+//         u{
+//             color: $color-1;
+//             text-decoration: none;
+//         }
+// }
 
-.Titulo__contacto {
-    display: block;
-    font-family: 'Fredoka One', cursive;
-    font-size: 60px;
-    text-shadow: 4px 6px 8px #000, 4px 6px 10px #fff;
-    padding-bottom: 50px;
-    text-align: left;
-    margin-bottom: 30px;
-    margin-left: 30px;
-    padding-top: 20px;
-}
+// .Titulo__contacto {
+//     display: block;
+//     font-family: 'Fredoka One', cursive;
+//     font-size: 60px;
+//     text-shadow: 4px 6px 8px #000, 4px 6px 10px #fff;
+//     padding-bottom: 50px;
+//     text-align: left;
+//     margin-bottom: 30px;
+//     margin-left: 30px;
+//     padding-top: 20px;
+// }
 
-.Titulo__contacto-1{
-    color: $color-1;
-    font-size: 40px;
-    font-family: 'Fredoka One', cursive;
-    text-shadow: 4px 6px 8px #000, 4px 6px 10px #fff; 
-}
+// .Titulo__contacto-1{
+//     color: $color-1;
+//     font-size: 40px;
+//     font-family: 'Fredoka One', cursive;
+//     text-shadow: 4px 6px 8px #000, 4px 6px 10px #fff; 
+// }
 
-#Gif__ig{
-    margin: 100px 0 30px 500px;
-}
+// #Gif__ig{
+//     margin: 100px 0 30px 500px;
+// }
 
-.Ig__contacto{
-    position: absolute;
-    color: $color-1;
-    font-size: 40px;
-    font-family: 'Fredoka One', cursive;
-    top: 45%;
-    left: 50%;
-    text-shadow: 4px 6px 8px #000, 4px 6px 10px #fff;
-}
+// .Ig__contacto{
+//     position: absolute;
+//     color: $color-1;
+//     font-size: 40px;
+//     font-family: 'Fredoka One', cursive;
+//     top: 45%;
+//     left: 50%;
+//     text-shadow: 4px 6px 8px #000, 4px 6px 10px #fff;
+// }
 
-.Subtitulo__contacto{
-    color: $color-1;
-    font-size: 40px;
-    font-family: 'Grape Nuts', cursive;
-    margin: 15px;
-    text-shadow: 4px 6px 8px #000, 4px 6px 10px #fff;
-}
+// .Subtitulo__contacto{
+//     color: $color-1;
+//     font-size: 40px;
+//     font-family: 'Grape Nuts', cursive;
+//     margin: 15px;
+//     text-shadow: 4px 6px 8px #000, 4px 6px 10px #fff;
+// }
