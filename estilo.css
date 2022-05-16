@@ -376,11 +376,7 @@ li a:hover {
 .Color__letra {
   color: #fff;
 }
-.Color__letra .pais {
-  font-size: 20px;
-  margin: 15px;
-}
-.Color__letra .sexo {
+.Color__letra .pais, .Color__letra .sexo {
   font-size: 20px;
   margin: 15px;
 }
@@ -394,7 +390,7 @@ li a:hover {
   font-size: 20px;
   margin: 10px;
 }
-.Color__letra .opinion {
+.Color__letra .opinion, .Color__letra .talle {
   font-size: 20px;
   margin: 30px;
 }
@@ -402,11 +398,6 @@ li a:hover {
   font-size: 20px;
   margin: 30px 30px 0 15px;
 }
-.Color__letra .talle {
-  font-size: 20px;
-  margin: 30px;
-}
-
 #input-datos {
   margin-left: 10px;
 }
@@ -425,5 +416,44 @@ li a:hover {
 }
 
 /* PREGUNTAS.HTML */
+.Titulo-preguntas h2 {
+  font-size: 55px;
+  font-weight: bold;
+  color: #C0C0C0;
+  text-shadow: 4px 6px 8px #000, 4px 6px 10px #fff;
+}
+
+.Preguntas {
+  font-size: 26px;
+  text-decoration: underline;
+  font-weight: bold;
+  color: #fff;
+}
+
+.Preguntas-respuestas {
+  color: #fff;
+  text-shadow: 4px 6px 8px #000;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+  .Titulo-preguntas h2 {
+    font-size: 38px;
+  }
+}
+@media only screen and (min-width: 300px) and (max-width: 575px) {
+  .Titulo-preguntas h2 {
+    font-size: 32px;
+  }
+
+  .Preguntas {
+    font-size: 20px;
+  }
+
+  .Preguntas-respuestas {
+    font-size: 14px;
+  }
+}
 
 /*# sourceMappingURL=estilo.css.map */

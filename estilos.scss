@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 $color-1:#fff;
+$text-sh2: 4px 6px 8px #000, 4px 6px 10px #fff;
+$tamaño-fuente: ("fuente1": 35px, "fuente2": 30px);
 
                             /* INDEX.HTML */
 
@@ -55,7 +57,7 @@ li{
 
 @media only screen and (min-width: 250px) and (max-width: 427px){
     .subtitulo-info{
-        font-size: 30px;
+        font-size: map-get($tamaño-fuente , "fuente2" );
     }
 }
 @media only screen and (min-width: 427px) and (max-width: 768px){
@@ -81,7 +83,7 @@ li{
 .Subtitulo{
     h2{
         color: $color-1;
-        text-shadow: 4px 6px 8px #000, 4px 6px 10px #fff;
+        text-shadow: $text-sh2;
     }
 }
 
@@ -149,8 +151,6 @@ li{
 }
 
                             /* Seccion Envíos */
-
-$tamaño-fuente: ("fuente1": 35px, "fuente2": 30px);
 
 .Subtitulo__h3-2{
     grid-area: subtitulo2;
@@ -243,7 +243,7 @@ $tamaño-fuente: ("fuente1": 35px, "fuente2": 30px);
                             
 .subtitulo-info{
     color: $color-1;
-    text-shadow: 4px 6px 8px #000, 4px 6px 10px #fff;
+    text-shadow: $text-sh2;
 }
 
 .informacion{
@@ -258,8 +258,8 @@ $tamaño-fuente: ("fuente1": 35px, "fuente2": 30px);
     display: flex;
     flex-wrap: wrap;
     font-family: 'Fredoka One', cursive;
-    font-size: 30px;
-    text-shadow: 4px 6px 8px #000, 4px 6px 10px #fff;
+    font-size: map-get($tamaño-fuente , "fuente2" );
+    text-shadow: $text-sh2;
     padding: 30px;
     margin-right: 75px;
     justify-content: center;
@@ -282,15 +282,15 @@ $tamaño-fuente: ("fuente1": 35px, "fuente2": 30px);
             font-size: 40px;
             font-family: 'Grape Nuts', cursive;
             padding: 20px;
-            text-shadow: 6px 6px 10px #f10d0d, 6px 6px 10px #fff;
+            text-shadow: 6px 6px 10px #f10d0d, 6px 6px 10px $color-1;
             transition: .5s;
         }
             em{
                 font-family: 'Fredoka One', cursive;
-                font-size: 30px;
+                font-size: map-get($tamaño-fuente , "fuente2" );
                 padding: 20px;
                 color: #008000;
-                text-shadow: 4px 6px 8px #adff2f, 4px 6px 10px #fff;
+                text-shadow: 4px 6px 8px #adff2f, 4px 6px 10px $color-1;
                 transition: .5s;
                     &:hover{
                         color:#f10d0d;
@@ -406,14 +406,13 @@ $tamaño-fuente: ("fuente1": 35px, "fuente2": 30px);
 
 .subtitulo{
     display: block;
-    font-size: 30px;
+    font-size: map-get($tamaño-fuente , "fuente2" );
     font-family:'Courier New', Courier, monospace;
     font-weight: bold;
     text-decoration: underline;
     white-space: nowrap;
     border-right: 4px solid;
     width: 22ch;
-
     animation: typing 2s steps(22),
     blink .5s infinite step-end alternate;
     overflow: hidden;
@@ -445,8 +444,7 @@ $tamaño-fuente: ("fuente1": 35px, "fuente2": 30px);
             margin: 15px;
         }
         .sexo{
-            font-size: 20px;
-            margin: 15px;
+            @extend .pais
         }
         .datos{
             font-size: 20px;
@@ -467,8 +465,7 @@ $tamaño-fuente: ("fuente1": 35px, "fuente2": 30px);
             margin: 30px 30px 0 15px;
         }
         .talle{
-            font-size: 20px;
-            margin: 30px;
+            @extend .opinion
         }
 }
 
@@ -492,50 +489,46 @@ $tamaño-fuente: ("fuente1": 35px, "fuente2": 30px);
 
     /* PREGUNTAS.HTML */
 
-// .Titulo__contacto{
-//         u{
-//             color: $color-1;
-//             text-decoration: none;
-//         }
-// }
+.Titulo-preguntas{
+    h2{
+        font-size: 55px;
+        font-weight: bold;
+        color: #C0C0C0;
+        text-shadow: $text-sh2;
+    }
+}
 
-// .Titulo__contacto {
-//     display: block;
-//     font-family: 'Fredoka One', cursive;
-//     font-size: 60px;
-//     text-shadow: 4px 6px 8px #000, 4px 6px 10px #fff;
-//     padding-bottom: 50px;
-//     text-align: left;
-//     margin-bottom: 30px;
-//     margin-left: 30px;
-//     padding-top: 20px;
-// }
+.Preguntas{
+    font-size: 26px;
+    text-decoration: underline;
+    font-weight: bold;
+    color: $color-1;
+}
 
-// .Titulo__contacto-1{
-//     color: $color-1;
-//     font-size: 40px;
-//     font-family: 'Fredoka One', cursive;
-//     text-shadow: 4px 6px 8px #000, 4px 6px 10px #fff; 
-// }
+.Preguntas-respuestas{
+    color: $color-1;
+    text-shadow: 4px 6px 8px #000;
+    font-size: 18px;
+    font-weight: 600;
+}
 
-// #Gif__ig{
-//     margin: 100px 0 30px 500px;
-// }
-
-// .Ig__contacto{
-//     position: absolute;
-//     color: $color-1;
-//     font-size: 40px;
-//     font-family: 'Fredoka One', cursive;
-//     top: 45%;
-//     left: 50%;
-//     text-shadow: 4px 6px 8px #000, 4px 6px 10px #fff;
-// }
-
-// .Subtitulo__contacto{
-//     color: $color-1;
-//     font-size: 40px;
-//     font-family: 'Grape Nuts', cursive;
-//     margin: 15px;
-//     text-shadow: 4px 6px 8px #000, 4px 6px 10px #fff;
-// }
+@media only screen and (min-width: 576px) and (max-width: 768px){
+    .Titulo-preguntas{
+        h2{
+            font-size: 38px;
+        }
+    }
+}
+@media only screen and (min-width: 300px) and (max-width: 575px){
+    .Titulo-preguntas{
+        h2{
+            font-size: 32px;
+        }
+    }
+    .Preguntas{
+        font-size: 20px;
+    }
+    .Preguntas-respuestas{
+        font-size: 14px;
+    }
+}
